@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocollo GRANELLO</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      padding: 1em 2em;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    button:hover {
+      background-color: #005ea2;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Protocollo GRANELLO v2.2</h1>
+    <p>🇮🇹 Clicca il bottone per iniziare. Il protocollo sarà attivato in modo invisibile.</p>
+    <p>🇬🇧 Click the button to begin. The protocol will be silently activated.</p>
+    <button onclick="activateProtocol()">Avvia / Start</button>
+  </div>
+
+  <script>
+    function activateProtocol() {
+      const phrase = "GRANELLO v2.2";
+      navigator.clipboard.writeText(phrase).then(() => {
+        window.open("https://copilot.microsoft.com/", "_blank");
+      });
+    }
+  </script>
+</body>
+</html>
